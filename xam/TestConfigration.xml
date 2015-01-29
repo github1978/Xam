@@ -1,0 +1,25 @@
+<TestConfigration>
+    <!-- 测试结果输出目录 -->
+	<OutPath></OutPath>
+	<!-- 测试报告名称 -->
+	<Report>
+	    <ReportName></ReportName>
+	    <ReportTitle></ReportTitle>
+	</Report>
+	<!-- 数据源配置 -->
+	<!-- 可以配置多个数据源，以便在测试过程中灵活使用 -->
+	<DataSource>
+	    <!-- 数据源可以是excel或者数据库 -->
+		<Source id="1" type="excel">
+			<path></path>
+		</Source>
+		<Source id="2" type="database">
+		    <!-- 数据库类型，可以是mysql,oracle,sqlserver -->
+			<dbtype></dbtype>
+			<url></url>
+			<dbname></dbname>
+			<user></user>
+			<pwd></pwd>
+		</Source>
+	</DataSource>
+</TestConfigration>
