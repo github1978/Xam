@@ -1,4 +1,4 @@
-package com.wisesignsoft.xam.drivers;
+package org.xam.drivers;
 
 import java.net.URL;
 
@@ -11,8 +11,11 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
- * 说明:封装webdriver某些复杂的操作
- *
+ * 封装webdriver某些复杂的操作
+ * @author 朱晓峰
+ * @testerhome umbrella1978
+ * @email umbrella1978@live.cn
+ * @github github1978
  */
 public class WebDriver2 extends RemoteWebDriver implements WebDriver{
 
@@ -28,7 +31,6 @@ public class WebDriver2 extends RemoteWebDriver implements WebDriver{
 	 */
 	public WebElement findElementByWait(final By by,long timeout){
 		new WebDriverWait(this, timeout).until(new ExpectedCondition<Boolean>() {
-			@Override
 			public Boolean apply(WebDriver driver) {
 				Boolean result = false;
 				try {

@@ -1,4 +1,4 @@
-package com.wisesignsoft.xam.report;
+package org.xam.report;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,8 +7,11 @@ import java.util.Map;
 
 
 /**
- * 说明:测试场景类，对应一个@TestMethod
- *
+ * 测试场景实体模型
+ * @author 朱晓峰
+ * @testerhome umbrella1978
+ * @email umbrella1978@live.cn
+ * @github github1978
  */
 public class Scenario {
 	

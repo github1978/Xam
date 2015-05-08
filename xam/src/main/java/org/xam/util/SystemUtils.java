@@ -1,4 +1,4 @@
-package com.wisesignsoft.xam.util;
+package org.xam.util;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

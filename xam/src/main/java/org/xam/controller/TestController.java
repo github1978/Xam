@@ -1,4 +1,4 @@
-package com.wisesignsoft.xam.controller;
+package org.xam.controller;
 
 import java.io.File;
 import java.lang.reflect.Field;
@@ -13,23 +13,27 @@ import java.util.Map;
 
 import org.dom4j.Document;
 import org.dom4j.io.SAXReader;
+import org.xam.controller.TestConfigration.Source;
+import org.xam.core.BasicCaseTemplete;
+import org.xam.core.XamConstants;
+import org.xam.core.XamCore;
+import org.xam.report.Report;
+import org.xam.report.Scenario;
+import org.xam.util.ReflectionUtils;
+import org.xam.util.SystemUtils;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
-import com.wisesignsoft.xam.controller.TestConfigration.Source;
-import com.wisesignsoft.xam.core.BasicCaseTemplete;
-import com.wisesignsoft.xam.core.XamConstants;
-import com.wisesignsoft.xam.core.XamCore;
-import com.wisesignsoft.xam.report.Report;
-import com.wisesignsoft.xam.report.Scenario;
-import com.wisesignsoft.xam.util.ReflectionUtils;
-import com.wisesignsoft.xam.util.SystemUtils;
 
 import junit.framework.ComparisonFailure;
 
 /**
- * 说明:调度执行案例，采集测试结果
- *
+ * 测试脚本调度类
+ * 
+ * @author 朱晓峰
+ * @testerhome umbrella1978
+ * @email umbrella1978@live.cn
+ * @github github1978
  */
 public class TestController {
 
@@ -51,7 +55,7 @@ public class TestController {
 	}
 
 	/**
-	 * 无数据源，直接运行
+	 * 无数据源，直接运行指定脚本
 	 * 
 	 * @param testCase
 	 * @throws Exception
@@ -62,13 +66,9 @@ public class TestController {
 	}
 
 	/**
-	 * 加载数据源,数据源中有多少行,就会调用多少次测试案例类中所有标注了@TestMethods的方法
+	 * 加载数据源,数据源中有n行,就会调用n次测试脚本中所有标注了
 	 * 
-	 * @param testCase
-	 *            测试案例类
-	 * @param xlsx
-	 *            指定的excel路径
-	 * @throws Exception
+	 * @param datas 数据源
 	 */
 	public void RunAllTest(BasicCaseTemplete testCase,
 			List<Map<String, String>> datas) throws Exception {
@@ -78,10 +78,8 @@ public class TestController {
 	/**
 	 * 由脚本指定运行次数,可结合数据输入使用
 	 * 
-	 * @param testCase
 	 * @param iterations
 	 *            重复运行次数
-	 * @throws Exception
 	 */
 	public void RunAllTest(BasicCaseTemplete testCase, int iterations,
 			List<Map<String, String>> datas) throws Exception {
@@ -94,12 +92,6 @@ public class TestController {
 		report.export2xml(config.report.getReportName());
 	}
 
-	/**
-	 * 调用所有标注了@TestMethods的方法 并在调用前为变量赋值
-	 * 
-	 * @param testCase
-	 * @throws Exception
-	 */
 	@SuppressWarnings("unchecked")
 	private void InvokeAllTestMethod(BasicCaseTemplete testCase,
 			int iterations, List<Map<String, String>> datas) {

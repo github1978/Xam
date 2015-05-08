@@ -1,4 +1,4 @@
-package com.wisesignsoft.xam.util;
+package org.xam.util;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.ParameterizedType;

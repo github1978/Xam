@@ -1,8 +1,15 @@
-package com.wisesignsoft.xam.datadriven;
+package org.xam.datadriven;
 
-import com.wisesignsoft.xam.controller.TestConfigration.Source;
+import org.xam.controller.TestConfigration.Source;
 
-public class ConnStr {
+/**
+ * 数据库连接串实体模型
+ * @author 朱晓峰
+ * @testerhome umbrella1978
+ * @email umbrella1978@live.cn
+ * @github github1978
+ */
+public class DBConnectEntity {
 	
 	private String Driver;
 	private String Url;
@@ -11,7 +18,7 @@ public class ConnStr {
 	
 	private static final String MYSQL_DRIVER="com.mysql.jdbc.Driver";
 	
-	public ConnStr(Source ds) throws Exception{
+	public DBConnectEntity(Source ds) throws Exception{
 		if(!ds.getType().equals("database")){
 			throw new Exception("使用的数据源不是数据库！");
 		}

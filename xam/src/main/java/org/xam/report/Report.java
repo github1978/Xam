@@ -1,4 +1,4 @@
-package com.wisesignsoft.xam.report;
+package org.xam.report;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -12,13 +12,17 @@ import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
+import org.xam.util.FileUtils;
 
 import com.wisesignsoft.xam.ImportResources;
-import com.wisesignsoft.xam.util.FileUtils;
+
 
 /**
- * 说明:测试报告类，组织和输出测试报告
- *
+ * 生成测试报告
+ * @author 朱晓峰
+ * @testerhome umbrella1978
+ * @email umbrella1978@live.cn
+ * @github github1978
  */
 public class Report {
 

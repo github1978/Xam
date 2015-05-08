@@ -1,4 +1,4 @@
-package com.wisesignsoft.xam.datadriven;
+package org.xam.datadriven;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,17 +6,22 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.wisesignsoft.xam.controller.TestConfigration.Source;
+import org.xam.controller.TestConfigration.Source;
 
+/**
+ * 数据库查询执行器
+ * @author 朱晓峰
+ * @testerhome umbrella1978
+ * @email umbrella1978@live.cn
+ * @github github1978
+ */
 public class JDBCExecutor {
 
-	// 连接对象
 	private Connection connection;
-	// Statement对象,可以执行SQL语句并返回结果
 	private Statement stmt;
 
 	public JDBCExecutor(Source ds) throws Exception {
-		ConnStr constr = new ConnStr(ds);
+		DBConnectEntity constr = new DBConnectEntity(ds);
 		Class.forName(constr.getDriver());
 		connection = DriverManager.getConnection(constr.getUrl(),
 		constr.getUser(), constr.getPwd());
@@ -24,24 +29,13 @@ public class JDBCExecutor {
 			ResultSet.CONCUR_UPDATABLE);
 	}
 
-	public ResultSet executeQuery(String sql) {
-		try {
-			// 利用Statement对象执行参数的sql
-			ResultSet result = stmt.executeQuery(sql);
-			return result;
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return null;
+	public ResultSet executeQuery(String sql) throws SQLException {
+		ResultSet result = stmt.executeQuery(sql);
+		return result;
 	}
 
 	/**
 	 * 获取数据集中第1个字段的值 仅适用于数据集中只有一行且只有一列的数据
-	 * 
-	 * @param rs
-	 *            数据集
-	 * @return
-	 * @throws Exception 
 	 */
 	public String parseRsSingleValue(ResultSet rs) throws Exception {
 			if (rs.getMetaData().getColumnCount() != 1

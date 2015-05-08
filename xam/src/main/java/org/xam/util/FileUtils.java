@@ -1,4 +1,4 @@
-package com.wisesignsoft.xam.util;
+package org.xam.util;
 
 import java.io.BufferedReader;
 import java.io.File;

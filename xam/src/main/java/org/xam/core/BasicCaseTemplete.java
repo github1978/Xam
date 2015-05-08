@@ -1,4 +1,4 @@
-package com.wisesignsoft.xam.core;
+package org.xam.core;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,12 +19,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.BlockJUnit4ClassRunner;
-
-import com.wisesignsoft.xam.controller.Params;
-import com.wisesignsoft.xam.controller.TestController;
-import com.wisesignsoft.xam.report.Report;
-import com.wisesignsoft.xam.util.ExcelUtils;
-import com.wisesignsoft.xam.util.SystemUtils;
+import org.xam.controller.Params;
+import org.xam.controller.TestController;
+import org.xam.report.Report;
+import org.xam.util.ExcelUtils;
+import org.xam.util.SystemUtils;
 
 
 /**

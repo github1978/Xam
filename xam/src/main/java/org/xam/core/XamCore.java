@@ -1,4 +1,4 @@
-package com.wisesignsoft.xam.core;
+package org.xam.core;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,10 +9,17 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.xam.drivers.WebDriver2;
 
 import com.thoughtworks.selenium.Selenium;
-import com.wisesignsoft.xam.drivers.WebDriver2;
 
+/**
+ * 核心功能
+ * @author 朱晓峰
+ * @testerhome umbrella1978
+ * @email umbrella1978@live.cn
+ * @github github1978
+ */
 @SuppressWarnings("deprecation")
 public class XamCore {
 
@@ -94,8 +101,7 @@ public class XamCore {
 	/**
 	 * 截图
 	 * 
-	 * @param path
-	 *            例如:C:\1.jpg
+	 * @param path 图片保存路径
 	 */
 	public void getScreenShot(String path) {
 		if (webdriver != null) {

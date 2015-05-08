@@ -1,4 +1,4 @@
-package com.wisesignsoft.xam.controller;
+package org.xam.controller;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
