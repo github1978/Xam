@@ -25,9 +25,12 @@ import org.xam.report.Report;
 import org.xam.util.ExcelUtils;
 import org.xam.util.SystemUtils;
 
-
 /**
- * 说明:基础案例
+ * 基础案例模板
+ * @author 朱晓峰
+ * @testerhome umbrella1978
+ * @email umbrella1978@live.cn
+ * @github github1978
  */
 @RunWith(BlockJUnit4ClassRunner.class)
 public abstract class BasicCaseTemplete extends TestCase {

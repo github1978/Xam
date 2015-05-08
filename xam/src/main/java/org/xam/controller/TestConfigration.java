@@ -7,7 +7,11 @@ import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
 /**
- * 说明:xml转对象
+ * XStream XML转对象模型
+ * @author 朱晓峰
+ * @testerhome umbrella1978
+ * @email umbrella1978@live.cn
+ * @github github1978
  */
 @XStreamAlias("TestConfigration")
 public class TestConfigration {

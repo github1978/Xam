@@ -7,6 +7,10 @@ import java.lang.annotation.ElementType;
 
 /**
  * 用于数据源匹配的注解类
+ * @author 朱晓峰
+ * @testerhome umbrella1978
+ * @email umbrella1978@live.cn
+ * @github github1978
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD})
